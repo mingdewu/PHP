@@ -1,0 +1,21 @@
+<?php
+ /*
+   连接服务器:mysql_connect(*,*,*,*) 
+   关闭mysql_close();
+   连接某个库mysql_select_db();
+ */
+?>
+<?php
+//连接数据库
+  $dbconn=mysql_connect("localhost","root","dvbbs");
+  if(isset($dbconn))
+  {
+  	//print_r($dbconn);
+  	var_dump($dbconn);
+  	mysql_close($dbconn);
+  }
+  else 
+  {
+  	print '没有连接上';
+  }
+?>
